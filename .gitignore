@@ -1,0 +1,19 @@
+.env
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/*
+!data/raw/.gitkeep
+data/exports/*
+!data/exports/.gitkeep
+logs/*.log
+.DS_Store
+
+# Local-only planning notes (kept on disk, not published)
+docs/MEETING_TALKING_POINTS.md
+docs/OPTION_B_EXECUTION_PLAYBOOK.md

@@ -1,0 +1,24 @@
+[project]
+name = "edu-content-pipeline"
+version = "0.1.0"
+description = "EnCoDe Lab Option B — YouTube educational metadata to CSV"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "google-api-python-client>=2.100.0",
+    "python-dotenv>=1.0.0",
+    "PyYAML>=6.0",
+    "pandas>=2.0.0",
+    "tenacity>=8.2.0",
+    "nltk>=3.8.0",
+]
+
+[project.scripts]
+edu-content-pipeline = "edu_content_pipeline.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

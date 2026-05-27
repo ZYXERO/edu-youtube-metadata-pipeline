@@ -1,0 +1,49 @@
+# EnCoDe Lab–themed queries (USF Engaging Computing Design Research Lab)
+# https://encoderesearchlab.org/ — HCI, AR, child-computer interaction, learning technologies
+
+output:
+  csv_path: data/exports/educational_videos.csv
+  manifest_path: data/exports/run_manifest.json
+  raw_json_dir: data/raw
+
+collection:
+  results_per_query: 100      # each query collects up to 100 videos (2 API pages × 50)
+  min_total_rows: 100         # minimum unique videos after dedupe (challenge requirement)
+  sleep_ms_between_search: 300
+  order: relevance
+  relevance_language: en
+  safe_search: moderate
+  # video_category_id: 27
+
+queries:
+  - "augmented reality educational experience children"
+  - "child computer interaction learning technology design"
+  - "AR headset situational awareness tutorial"
+  - "human computer interaction natural user interfaces lecture"
+  - "designing meaningful educational experiences augmented reality"
+
+filter:
+  min_relevance_score: 0.0
+  educational_keywords:
+    - learn
+    - tutorial
+    - lecture
+    - education
+    - children
+    - child
+    - ar
+    - augmented
+    - reality
+    - hci
+    - interaction
+    - usability
+    - classroom
+    - headset
+    - immersive
+
+export:
+  description_max_chars: 500
+
+sentiment:
+  enabled: false
+  output_csv_path: data/exports/educational_videos_with_sentiment.csv
